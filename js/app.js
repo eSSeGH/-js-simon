@@ -19,6 +19,8 @@ alert("hai 30 secondi per ripassare i numeri che hai visionato")
 
 let askedNumsArray = []
 
+// FUNCTIONS
+
 function ask5Nums() {
 
     for (i=0; i<5; i++) {
@@ -40,8 +42,6 @@ function ask5Nums() {
     console.log(`Hai indovinato ${correctNumsArray.length} numeri,
     e sono i seguenti:`, correctNumsArray)
 }
-
-// FUNCTIONS
 
 // GET RANDOM BETWEEN MIN AND MAX FUNC
 function randMinMax(min, max) {
