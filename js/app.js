@@ -17,27 +17,30 @@ setTimeout(ask5Nums, 30000)
 
 alert("hai 30 secondi per ripassare i numeri che hai visionato")
 
-let askedNumsArray = []
+
+
+
 
 // FUNCTIONS
 
+// ASK 5 NUMBERS FUNCTION
 function ask5Nums() {
 
-    for (i=0; i<5; i++) {
-        let askedNum = parseInt(prompt("Inserisci un numero che ricordi"))
-        askedNumsArray.push(askedNum)
-    }
+    console.log(randNums)
 
+    let askedNumsArray = []
     let correctNumsArray = []
 
+    for (i=0; i<randNums.length; i++) {
+        let askedNum = parseInt(prompt("Inserisci un numero che ricordi"))
 
-    for (i=0; i < askedNumsArray.length; i++) {
+        if (randNums.includes(askedNum) && !correctNumsArray.includes(askedNum)) {
 
-        if (randNums.includes(askedNumsArray[i])) {
-
-            correctNumsArray.push(askedNumsArray[i])
+            correctNumsArray.push(askedNum)        
         }
-    }
+    } 
+    
+    console.log(correctNumsArray)
 
     console.log(`Hai indovinato ${correctNumsArray.length} numeri,
     e sono i seguenti:`, correctNumsArray)
